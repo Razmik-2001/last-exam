@@ -1,0 +1,152 @@
+.header {
+    background-color: #232f3e; /* Dark blue-grey */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Pushes left and right sections apart */
+    align-items: center; /* Vertically centers items */
+    width: 100%;
+    min-height: 60px; /* Ensure a minimum height for the header */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between items in the left section */
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0; /* Remove default button padding */
+    line-height: 1; /* Align unicode icon vertically */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #febd69; /* Amazon's distinct orange-ish color */
+}
+
+.search-bar-container {
+    display: flex;
+    border-radius: 4px; /* Rounded corners for the search bar */
+    overflow: hidden; /* Ensures input and button corners are contained */
+    border: 1px solid #febd69; /* Border around the entire search bar */
+}
+
+.search-input {
+    padding: 8px 10px;
+    border: none; /* Remove default input border */
+    outline: none; /* Remove focus outline */
+    width: 300px; /* Adjust search input width as needed */
+    font-size: 16px;
+}
+
+.search-button {
+    background-color: #febd69; /* Orange search button background */
+    border: none; /* Remove default button border */
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #333; /* Dark text for the button */
+    font-size: 18px;
+    display: flex; /* Use flex to center icon if needed */
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+.search-button:hover {
+    background-color: #f2c75a; /* Slightly lighter orange on hover */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between Cart and Sign In */
+}
+
+.cart {
+    position: relative; /* For positioning the cart count */
+    font-weight: bold;
+    padding-right: 15px; /* Space for the count bubble */
+}
+
+.cart-count {
+    background-color: #f0c14b; /* Yellow background for count */
+    color: #111; /* Dark text for count */
+    border-radius: 50%; /* Makes it circular */
+    padding: 2px 6px;
+    font-size: 12px;
+    position: absolute;
+    top: -8px; /* Adjust vertical position */
+    right: -2px; /* Adjust horizontal position */
+    line-height: 1; /* Ensure text sits nicely */
+}
+
+.sign-in-link {
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap; /* Prevent "Sign In" from wrapping */
+}
+
+/* Optional: Basic responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        justify-content: center; /* Center items when wrapped */
+        padding: 10px;
+    }
+
+    .header-left, .header-right {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px; /* Add space between wrapped sections */
+    }
+
+    .search-bar-container {
+        width: 100%; /* Make search bar full width */
+        margin-top: 10px; /* Space from logo */
+    }
+
+    .search-input {
+        width: calc(100% - 40px); /* Adjust width to fit button */
+    }
+
+    .logo {
+        margin-right: auto; /* Push menu and search to ends */
+        margin-left: 10px;
+    }
+
+    .menu-button {
+        order: -1; /* Move menu button to the very start */
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-left {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .search-input {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+    .search-button {
+        padding: 6px 10px;
+        font-size: 16px;
+    }
+
+    .cart, .sign-in-link {
+        font-size: 14px;
+    }
+}
