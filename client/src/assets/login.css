@@ -4,88 +4,88 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px; /* Max width for the form box */
-    margin: 50px auto; /* Top/bottom margin, auto left/right for centering */
-    flex-grow: 1; /* Allows the main content to take up available space, pushing header/footer (if any) */
-    display: flex; /* Use flexbox for centering form elements */
+    max-width: 400px;
+    margin: 50px auto;
+    flex-grow: 1;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align form elements to the left */
+    align-items: flex-start;
 }
 
 .sign-in-title {
     font-size: 28px;
     margin-bottom: 30px;
-    text-align: left; /* Align title to the left */
+    text-align: left;
     color: #111;
 }
 
 .form-group {
-    margin-bottom: 20px; /* Space between form fields */
-    width: 100%; /* Make form group take full width */
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .label {
-    display: block; /* Make labels block-level to stack above inputs */
+    display: block;
     font-weight: bold;
     margin-bottom: 8px;
     color: #333;
 }
 
 .input-field {
-    width: 100%; /* Inputs take full width of their parent */
+    width: 100%;
     padding: 10px;
     border: 1px solid #a6a6a6;
     border-radius: 4px;
     font-size: 16px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); /* Inner shadow for depth */
-    outline: none; /* Remove default outline */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    outline: none;
 }
 
 .input-field:focus {
-    border-color: #e77600; /* Orange border on focus */
-    box-shadow: 0 0 0 3px #fce8c4; /* Orange glow on focus */
+    border-color: #e77600;
+    box-shadow: 0 0 0 3px #fce8c4;
 }
 
 .sign-in-button {
-    background-color: #f0c14b; /* Yellow-orange button */
-    color: #111; /* Dark text */
+    background-color: #f0c14b;
+    color: #111;
     border: 1px solid #a6a6a6;
     border-color: #a88734 #9c7e31 #846a29;
     border-radius: 3px;
     padding: 10px 20px;
-    width: 100%; /* Button takes full width */
+    width: 100%;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    margin-top: 10px; /* Space above button */
+    margin-top: 10px;
     transition: background-color 0.2s ease;
 }
 
 .sign-in-button:hover {
-    background-color: #f2c75a; /* Slightly lighter yellow on hover */
+    background-color: #f2c75a;
 }
 
 .links {
-    margin-top: 30px; /* Space above links section */
+    margin-top: 30px;
     font-size: 14px;
     line-height: 1.5;
-    width: 100%; /* Ensure links section takes full width */
+    width: 100%;
 }
 
 .new-customer,
 .forgot-password {
     color: #555;
-    margin-bottom: 10px; /* Space between new customer and forgot password lines */
+    margin-bottom: 10px;
 }
 
 .create-account-link,
 .reset-password-link {
-    color: #0066c0; /* Blue link color */
-    text-decoration: none; /* Remove underline */
+    color: #0066c0;
+    text-decoration: none;
 }
 
 .create-account-link:hover,
 .reset-password-link:hover {
-    text-decoration: underline; /* Underline on hover */
-    color: #c45500; /* Change color on hover */
+    text-decoration: underline;
+    color: #c45500;
 }

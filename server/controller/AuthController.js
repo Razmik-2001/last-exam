@@ -8,7 +8,6 @@ const User = require('../models/authSchema');
 class authController {
     static async register(req, res) {
         const {name, email, password, confirmPassword} = req.body;
-        console.log(11111, name, email, password, confirmPassword);
 
         if (!name.trim() || !email.trim() || !password.trim() || !confirmPassword.trim()) {
             return res.status(400).json({

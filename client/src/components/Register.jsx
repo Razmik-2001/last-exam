@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {register} from '../app/auth/authThunk';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 function Register() {
+    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const [formData, setFormData] = useState({
@@ -21,7 +22,9 @@ function Register() {
 
     const handleSubmit = (ev) => {
         ev.preventDefault();
-        dispatch(register(formData))
+        dispatch(register(formData)).then(() => {
+            navigate('/login');
+        })
     }
 
     return (
